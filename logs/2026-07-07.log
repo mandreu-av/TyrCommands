@@ -4,3 +4,78 @@
 [2026-07-07T08:09:57.269Z] [SUCCESS] File written: /Users/mandreu/.tyr/manifest.json
 [2026-07-07T08:09:57.269Z] [SUCCESS] manifest.json generated at /Users/mandreu/.tyr/manifest.json (12 commands).
 [2026-07-07T08:09:57.269Z] [INFO] Commit and push it so others can install it with: tyr --add <raw-url-to-manifest.json>
+[2026-07-07T08:10:56.131Z] [INFO] Starting removal of command: 'ai:code'
+[2026-07-07T08:10:56.132Z] [SUCCESS] File deleted: /Users/mandreu/.tyr/commands/code-ai.tyr.ts
+[2026-07-07T08:10:56.133Z] [INFO] Backup created at: /Users/mandreu/.tyr/map.yml.bak
+[2026-07-07T08:10:56.134Z] [SUCCESS] File written: /Users/mandreu/.tyr/map.yml
+[2026-07-07T08:10:56.134Z] [SUCCESS] Command 'ai:code' removed.
+[2026-07-07T08:11:00.702Z] [INFO] Starting removal of command: 'ai:chat'
+[2026-07-07T08:11:00.703Z] [SUCCESS] File deleted: /Users/mandreu/.tyr/commands/chat-ai.tyr.ts
+[2026-07-07T08:11:00.704Z] [INFO] Backup created at: /Users/mandreu/.tyr/map.yml.bak
+[2026-07-07T08:11:00.704Z] [SUCCESS] File written: /Users/mandreu/.tyr/map.yml
+[2026-07-07T08:11:00.704Z] [SUCCESS] Command 'ai:chat' removed.
+[2026-07-07T08:11:04.949Z] [ERROR] Command 'rem:ai:test' not found.
+[2026-07-07T08:11:10.200Z] [INFO] Starting removal of command: 'ai:describe'
+[2026-07-07T08:11:10.201Z] [SUCCESS] File deleted: /Users/mandreu/.tyr/commands/describe-ai.tyr.ts
+[2026-07-07T08:11:10.202Z] [INFO] Backup created at: /Users/mandreu/.tyr/map.yml.bak
+[2026-07-07T08:11:10.202Z] [SUCCESS] File written: /Users/mandreu/.tyr/map.yml
+[2026-07-07T08:11:10.202Z] [SUCCESS] Command 'ai:describe' removed.
+[2026-07-07T08:11:20.521Z] [INFO] Starting removal of command: 'test-ai'
+[2026-07-07T08:11:20.521Z] [ERROR] Command 'test-ai' does not exist in ~/.tyr/map.yml.
+[2026-07-07T08:11:37.634Z] [INFO] Starting removal of command: 'ai:test'
+[2026-07-07T08:11:37.634Z] [SUCCESS] File deleted: /Users/mandreu/.tyr/commands/test-ai.tyr.ts
+[2026-07-07T08:11:37.636Z] [INFO] Backup created at: /Users/mandreu/.tyr/map.yml.bak
+[2026-07-07T08:11:37.636Z] [SUCCESS] File written: /Users/mandreu/.tyr/map.yml
+[2026-07-07T08:11:37.636Z] [SUCCESS] Command 'ai:test' removed.
+[2026-07-07T08:12:09.759Z] [INFO] Validating manifest: https://raw.githubusercontent.com/mandreu-av/TyrCommands/main/ai-manifest.json
+[2026-07-07T08:12:10.061Z] [ERROR] Could not add module: Manifest at https://raw.githubusercontent.com/mandreu-av/TyrCommands/main/ai-manifest.json has an invalid command name: 'ai:describe'
+[2026-07-07T08:12:10.061Z] [INFO] Could not add module: Manifest at https://raw.githubusercontent.com/mandreu-av/TyrCommands/main/ai-manifest.json has an invalid command name: 'ai:describe'
+[2026-07-07T08:22:13.062Z] [INFO] Validating manifest: https://raw.githubusercontent.com/mandreu-av/TyrCommands/main/ai-manifest.json
+[2026-07-07T08:22:13.331Z] [INFO] Backup created at: /Users/mandreu/.tyr/imported_modules.yaml.bak
+[2026-07-07T08:22:13.332Z] [SUCCESS] File written: /Users/mandreu/.tyr/imported_modules.yaml
+[2026-07-07T08:22:13.332Z] [SUCCESS] Module 'ai-manifest' registered in /Users/mandreu/.tyr/imported_modules.yaml
+[2026-07-07T08:22:13.333Z] [INFO] Syncing module 'ai-manifest' (https://raw.githubusercontent.com/mandreu-av/TyrCommands/main/ai-manifest.json)...
+[2026-07-07T08:22:13.568Z] [SUCCESS] File written: /Users/mandreu/.tyr/commands/ai-describe.tyr.ts
+[2026-07-07T08:22:13.568Z] [SUCCESS] Installed 'ai:describe' from module 'ai-manifest'.
+[2026-07-07T08:22:13.789Z] [SUCCESS] File written: /Users/mandreu/.tyr/commands/ai-code.tyr.ts
+[2026-07-07T08:22:13.790Z] [SUCCESS] Installed 'ai:code' from module 'ai-manifest'.
+[2026-07-07T08:22:13.998Z] [SUCCESS] File written: /Users/mandreu/.tyr/commands/ai-test.tyr.ts
+[2026-07-07T08:22:13.999Z] [SUCCESS] Installed 'ai:test' from module 'ai-manifest'.
+[2026-07-07T08:22:14.235Z] [SUCCESS] File written: /Users/mandreu/.tyr/commands/ai-chat.tyr.ts
+[2026-07-07T08:22:14.236Z] [SUCCESS] Installed 'ai:chat' from module 'ai-manifest'.
+[2026-07-07T08:22:14.240Z] [INFO] Backup created at: /Users/mandreu/.tyr/map.yml.bak
+[2026-07-07T08:22:14.241Z] [SUCCESS] File written: /Users/mandreu/.tyr/map.yml
+[2026-07-07T08:22:14.242Z] [SUCCESS] File written: /Users/mandreu/.tyr/imported_modules.lock.yml
+[2026-07-07T08:22:14.242Z] [INFO] Sync finished — installed: 4, updated: 0, skipped: 0, failed: 0.
+[2026-07-07T08:25:12.997Z] [INFO] Imported modules:
+[2026-07-07T08:25:12.998Z] [INFO]   ai-manifest -> https://raw.githubusercontent.com/mandreu-av/TyrCommands/main/ai-manifest.json
+[2026-07-07T08:25:20.184Z] [INFO] Imported modules:
+[2026-07-07T08:25:20.184Z] [INFO]   ai-manifest -> https://raw.githubusercontent.com/mandreu-av/TyrCommands/main/ai-manifest.json
+[2026-07-07T08:25:25.291Z] [INFO] Syncing module 'ai-manifest' (https://raw.githubusercontent.com/mandreu-av/TyrCommands/main/ai-manifest.json)...
+[2026-07-07T08:25:25.350Z] [INFO] Skipping 'ai:describe': already installed. Use 'tyr --update' to refresh.
+[2026-07-07T08:25:25.350Z] [INFO] Skipping 'ai:code': already installed. Use 'tyr --update' to refresh.
+[2026-07-07T08:25:25.350Z] [INFO] Skipping 'ai:test': already installed. Use 'tyr --update' to refresh.
+[2026-07-07T08:25:25.350Z] [INFO] Skipping 'ai:chat': already installed. Use 'tyr --update' to refresh.
+[2026-07-07T08:25:25.350Z] [INFO] Sync finished — installed: 0, updated: 0, skipped: 4, failed: 0.
+[2026-07-07T08:25:36.640Z] [INFO] Starting removal of command: 'ai:test'
+[2026-07-07T08:25:36.641Z] [SUCCESS] File deleted: /Users/mandreu/.tyr/commands/ai-test.tyr.ts
+[2026-07-07T08:25:36.642Z] [INFO] Backup created at: /Users/mandreu/.tyr/map.yml.bak
+[2026-07-07T08:25:36.642Z] [SUCCESS] File written: /Users/mandreu/.tyr/map.yml
+[2026-07-07T08:25:36.642Z] [SUCCESS] Command 'ai:test' removed.
+[2026-07-07T08:25:40.327Z] [INFO] Syncing module 'ai-manifest' (https://raw.githubusercontent.com/mandreu-av/TyrCommands/main/ai-manifest.json)...
+[2026-07-07T08:25:40.386Z] [INFO] Skipping 'ai:describe': already installed. Use 'tyr --update' to refresh.
+[2026-07-07T08:25:40.386Z] [INFO] Skipping 'ai:code': already installed. Use 'tyr --update' to refresh.
+[2026-07-07T08:25:40.398Z] [SUCCESS] File written: /Users/mandreu/.tyr/commands/ai-test.tyr.ts
+[2026-07-07T08:25:40.398Z] [SUCCESS] Installed 'ai:test' from module 'ai-manifest'.
+[2026-07-07T08:25:40.398Z] [INFO] Skipping 'ai:chat': already installed. Use 'tyr --update' to refresh.
+[2026-07-07T08:25:40.399Z] [INFO] Backup created at: /Users/mandreu/.tyr/map.yml.bak
+[2026-07-07T08:25:40.399Z] [SUCCESS] File written: /Users/mandreu/.tyr/map.yml
+[2026-07-07T08:25:40.400Z] [INFO] Backup created at: /Users/mandreu/.tyr/imported_modules.lock.yml.bak
+[2026-07-07T08:25:40.400Z] [SUCCESS] File written: /Users/mandreu/.tyr/imported_modules.lock.yml
+[2026-07-07T08:25:40.400Z] [INFO] Sync finished — installed: 1, updated: 0, skipped: 3, failed: 0.
+[2026-07-07T08:27:41.378Z] [INFO] Syncing module 'ai-manifest' (https://raw.githubusercontent.com/mandreu-av/TyrCommands/main/ai-manifest.json)...
+[2026-07-07T08:27:41.616Z] [INFO] Skipping 'ai:describe': already exists and is not managed by an import.
+[2026-07-07T08:27:41.616Z] [INFO] Skipping 'ai:code': already exists and is not managed by an import.
+[2026-07-07T08:27:41.617Z] [INFO] Skipping 'ai:test': already exists and is not managed by an import.
+[2026-07-07T08:27:41.617Z] [INFO] Skipping 'ai:chat': already exists and is not managed by an import.
+[2026-07-07T08:27:41.617Z] [INFO] Sync finished — installed: 0, updated: 0, skipped: 4, failed: 0.

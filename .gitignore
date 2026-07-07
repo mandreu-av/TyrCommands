@@ -5,3 +5,5 @@ plugins
 logs
 node_modules
 .tyr-mem
+*.bak
+logs

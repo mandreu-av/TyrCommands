@@ -1,1 +1,2 @@
-modules: {}
+modules:
+  ai-manifest: https://raw.githubusercontent.com/mandreu-av/TyrCommands/main/ai-manifest.json

@@ -1,0 +1,17 @@
+commands:
+  ai:describe:
+    module: ai-manifest
+    manifest: https://raw.githubusercontent.com/mandreu-av/TyrCommands/main/ai-manifest.json
+    source: https://raw.githubusercontent.com/mandreu-av/TyrCommands/main/commands/describe-ai.tyr.ts
+  ai:code:
+    module: ai-manifest
+    manifest: https://raw.githubusercontent.com/mandreu-av/TyrCommands/main/ai-manifest.json
+    source: https://raw.githubusercontent.com/mandreu-av/TyrCommands/main/commands/code-ai.tyr.ts
+  ai:test:
+    module: ai-manifest
+    manifest: https://raw.githubusercontent.com/mandreu-av/TyrCommands/main/ai-manifest.json
+    source: https://raw.githubusercontent.com/mandreu-av/TyrCommands/main/commands/test-ai.tyr.ts
+  ai:chat:
+    module: ai-manifest
+    manifest: https://raw.githubusercontent.com/mandreu-av/TyrCommands/main/ai-manifest.json
+    source: https://raw.githubusercontent.com/mandreu-av/TyrCommands/main/commands/chat-ai.tyr.ts
