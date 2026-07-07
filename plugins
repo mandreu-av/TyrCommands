@@ -1,0 +1,5 @@
+# Add your shell plugins here.
+# Compatible with zsh, bash and other POSIX shells.
+#
+# Examples (zsh):
+#   source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
