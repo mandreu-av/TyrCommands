@@ -1,5 +1,7 @@
-# ENVIRONMENT
 .env
-
-# NODE 
+bash/*
+!bash/avantio
+plugins
+logs
 node_modules
+.tyr-mem

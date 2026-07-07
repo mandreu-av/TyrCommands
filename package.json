@@ -3,8 +3,12 @@
   "version": "1.0.0",
   "type": "module",
   "private": true,
-  "description": "Custom Tyr commands (~/.tyr/)",
+  "description": "Comandos personalizados de Tyr (~/.tyr/)",
   "dependencies": {
     "@orxataguy/tyr": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "typescript": "^5.9.2"
   }
 }

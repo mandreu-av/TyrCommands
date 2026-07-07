@@ -1,5 +1,7 @@
-# Add your shell plugins here.
-# Compatible with zsh, bash and other POSIX shells.
+# Añade aquí tus plugins de shell.
+# Compatible con zsh, bash y otros shells POSIX.
 #
-# Examples (zsh):
+# Ejemplos (zsh):
 #   source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)

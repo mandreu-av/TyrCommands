@@ -1,1 +1,13 @@
-commands: {}
+commands:
+  di: ./commands/descarga-integracion.tyr.ts
+  dw: ./commands/descarga-web.tyr.ts
+  flush: ./commands/flush.tyr.ts
+  nib: ./commands/nueva-integracion-basic.tyr.ts
+  nic: ./commands/nueva-integracion-custom.tyr.ts
+  nw: ./commands/nueva-web.tyr.ts
+  tree: ./commands/tree.tyr.ts
+  remcache: ./commands/cache-remover.tyr.ts
+  ai:describe: ./commands/describe-ai.tyr.ts
+  ai:code: ./commands/code-ai.tyr.ts
+  ai:test: ./commands/test-ai.tyr.ts
+  ai:chat: ./commands/chat-ai.tyr.ts

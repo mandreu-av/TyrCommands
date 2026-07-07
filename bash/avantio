@@ -1,0 +1,249 @@
+# Alias útiles para navegar entre directorios frecuentes
+alias perm='sudo chmod -R 777'
+alias cl='cl() { cd ~/dev/wolbenvironment/dev/websITS/clients/"$1" }; cl'
+alias fr='cd ~/dev/wolbenvironment/dev/framework'
+alias db='db() { cd ~/dev/wolbenvironment/dev/online-booking/htdocs/datosBroker/"$1" }; db'
+alias wo='cd ~/dev/wolbenvironment'
+alias css='cd ~/dev/wolbenvironment/dev/fw-scss-compiler'
+alias vrms='cd ~/dev/wolbenvironment/dev/vrms'
+alias olb='cd ~/dev/wolbenvironment/dev/online-booking'
+
+# Alias útiles para cambios de versiones del framework
+alias v5='fr && gco v5'
+alias v6='fr && gco v6'
+alias v7='fr && gcm'
+alias v8='fr && gco v8'
+
+# Alias útiles para iniciar servicios necesarios del entorno
+alias tra='tra() {
+cd ~/dev/wolbenvironment/dev/translations-api &&\
+nvm use 14.15.0 &&\
+npm run start:dev
+}; tra'
+alias cookies='cookies() {
+cd ~/dev/wolbenvironment/dev/cookies &&\
+nvm use 22.11.0 &&\
+npm run start
+}; cookies'
+
+# Alias para crear una nueva web partiendo de la plantilla base
+alias nuevaweb='nuevaWeb() {
+    cl && git clone --branch v7 git@github.com:Avantio/framework-template.git "$1"/htdocs &&\
+    cd "$1"/htdocs && rm -rf .git && rm .gitignore && mkdir -p datosBroker/"$2" &&\
+    cp -R online/* datosBroker/"$2" && cd .. && git init &&\
+    git remote add origin git@github.com:Avantio-Webs/"$1".git &&\
+    echo "node_modules\n.DS_Store" >> .gitignore && git config --add core.filemode false
+}; nuevaWeb'
+
+#Alias para crear una nueva web partiendo de la plantilla V8
+alias nuevaweb-v8='nuevaWebV8() {
+    cl && git clone git@github.com:Avantio/framework-template.git "$1"/htdocs &&\
+    cd "$1"/htdocs && rm -rf .git && rm .gitignore && mkdir -p datosBroker/"$2" &&\
+    cp -R online/* datosBroker/"$2" && cd .. && git init &&\
+    git remote add origin git@github.com:Avantio-Webs/"$1".git &&\
+    echo "node_modules\n.DS_Store" >> .gitignore && git config --add core.filemode false
+}; nuevaWebV8'
+
+#Alias para crear un widget nuevo (Solo válido en la V8)
+alias new-widget='newWidget(){
+  if [ ! "$2" ]; then
+    mkdir ./child/gadgets/main/"$1" &&\
+    touch ./child/gadgets/main/"$1"/"$1".html &&\
+    touch ./child/gadgets/main/"$1"/"$1".scss
+  else
+    mkdir ./child/gadgets/"$2"/"$1" &&\
+    touch ./child/gadgets/"$2"/"$1"/"$1".html &&\
+    touch ./child/gadgets/"$2"/"$1"/"$1".scss
+  fi
+};newWidget'
+
+#Alias para importar un bloque (Solo válido en la V8)
+alias import-block='importBlock(){
+  if [ -d ~/dev/wolbenvironment/dev/framework/components/core-8.0.0/includes/blocks/"$1" ]; then
+    mkdir ./child/blocks/"$1"-custom &&\
+    cp ~/dev/wolbenvironment/dev/framework/components/core-8.0.0/includes/blocks/"$1"/* ./child/blocks/"$1"-custom &&\
+    mv ./child/blocks/"$1"-custom/"$1".html ./child/blocks/"$1"-custom/"$1"-custom.html  &&\
+    cat > ./child/blocks/"$1"-custom/"$1"-custom.scss
+  fi
+};importBlock'
+
+#Alias para importar un widget (Solo válido en la V8)
+alias import-widget='importWidget(){
+if [ ! "$2" ]; then
+    if [ -d ~/dev/wolbenvironment/dev/framework/components/core-8.0.0/includes/gadgets/main/"$1" ]; then
+      mkdir ./child/gadgets/main/"$1" &&\
+      cp ~/dev/wolbenvironment/dev/framework/components/core-8.0.0/includes/gadgets/main/"$1"/* ./child/gadgets/main/"$1" &&\
+      cat > ./child/gadgets/main/"$1"/"$1".scss
+    fi
+  else
+    mkdir ./child/gadgets/"$2"/"$1" &&\
+    cp ~/dev/wolbenvironment/dev/framework/components/core-8.0.0/includes/gadgets/"$2"/"$1"/* ./child/gadgets/"$2"/"$1" &&\
+    cat > ./child/gadgets/"$2"/"$1"/"$1".scss
+  fi
+  
+};importWidget'
+
+# Alias para descargar webs existentes
+alias descargaweb='descargaWeb() {
+  cl && git clone git@github.com:Avantio-Webs/"$1".git && git -C "$1" config --add core.filemode false
+}; descargaWeb'
+
+# Alias para crear una nueva integración partiendo de la plantilla base de la V8
+alias nuevaintegracion-custom='nuevaIntegracionCustom() {
+    db && git clone git@github.com:Avantio-Webs/plantilla-integracion-custom.git "$1" &&\
+    cd "$1" && rm -rf .git && git init &&\
+    git remote add origin git@github.com:Avantio-Webs/"$1".git &&\
+    git config --add core.filemode false
+}; nuevaIntegracionCustom'
+
+# Alias para crear una nueva integración partiendo de la plantilla base de la V8 la version estandar
+alias nuevaintegracion-standar='nuevaIntegracionStandar() {
+    db && git clone git@github.com:Avantio-Webs/bk_plantilla_V8-standar.git "$1" &&\
+    cd "$1" && rm -rf .git && git init &&\
+    git remote add origin git@github.com:Avantio-Webs/"$1".git &&\
+    git config --add core.filemode false
+}; nuevaIntegracionStandar'
+
+# Alias para descargar integracion existentes
+alias descargaintegracion='descargaIntegracion() {
+  db && git clone git@github.com:Avantio-Webs/"$1".git && git -C "$1" config --add core.filemode false
+}; descargaIntegracion'
+
+# Alias para sitemap 
+alias sitemap='sitemap() {
+cd ~/dev/wolbenvironment/dev/web-sitemap && npm run sitemap "$1"
+}; sitemap'
+
+# Alias para agilizar el uso de Git
+alias gt='tag() { git tag -a "$1" -m "$2" && git push origin "$1" }; tag'
+alias gtj='tagj() { git tag -a "$1" -m "https://avantio.atlassian.net/browse/$(getLatestCommitJiraIssue)" && git push origin "$1" }; tagj'
+alias gtl='git tag -n --sort=creatordate'
+alias gcj='comm() { git commit -m "$(getGitBranch) | $1" }; comm'
+alias gg='gcheckb() {git checkout -b $1}; gcheckb'
+alias ga='gitAdd() {git add .}; gitAdd'
+alias gaj='addCommit() {
+  git add .
+  git commit -m "$(getGitBranch) | $1"
+}; addCommit'
+alias gco='gcheck() {git checkout $1}; gcheck'
+alias ggpull='git pull origin "$(getGitBranch)"'
+alias ggpush='git push origin "$(getGitBranch)"'
+
+alias feat='feat() { git commit -m "$1 | feat($2): $3" }; feat'
+alias fix='fix() { git commit -m "$1 | fix($2): $3" }; fix'
+alias chore='chore() { git commit -m "$1 | chore($2): $3" }; chore'
+alias refactor='refactor() { git commit -m "$1 | refactor($2): $3" }; refactor'
+alias docs='docs() { git commit -m "$1 | docs($2): $3" }; docs'
+alias perf='perf() { git commit -m "$1 | perf($2): $3" }; perf'
+
+# Alias para incrementar versiones, admite comentarios
+# gtz = V1.0.(Z+1)
+# gty = V1.(Y+1).0
+# gtx = V(X+1).0.0
+# Ejemplo: gtx "Nueva versión lanzada"
+alias gtz='increment_patch() {
+latest_tag=$(git describe --tags --abbrev=0 2>/dev/null)
+
+if [[ -z "$latest_tag" ]]; then
+echo "No hay tags en el repositorio. Creando el primer tag V1.0.0..."
+new_tag="V1.0.0"
+else
+prefix=$(echo "$latest_tag" | grep -oE "^[^0-9]*")
+version_number=${latest_tag#"$prefix"}
+
+if [[ ! "$version_number" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+echo "Error: No se pudo extraer correctamente la versión del último tag ($latest_tag)."
+return 1
+fi
+
+IFS="." read -r major minor patch <<<"$version_number"
+patch=$((patch + 1))
+new_tag="${prefix}${major}.${minor}.${patch}"
+fi
+
+comment="$*"
+[[ -z "$comment" ]] && comment="Nuevo release $new_tag"
+
+git tag -a "$new_tag" -m "$comment"
+git push origin "$new_tag"
+
+echo "Nuevo tag creado y enviado: $new_tag"
+}; increment_patch'
+
+alias gty='increment_minor() {
+latest_tag=$(git describe --tags --abbrev=0 2>/dev/null)
+
+if [[ -z "$latest_tag" ]]; then
+echo "No hay tags en el repositorio. Creando el primer tag V1.0.0..."
+new_tag="V1.0.0"
+else
+prefix=$(echo "$latest_tag" | grep -oE "^[^0-9]*")
+version_number=${latest_tag#"$prefix"}
+
+if [[ ! "$version_number" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+echo "Error: No se pudo extraer correctamente la versión del último tag ($latest_tag)."
+return 1
+fi
+
+IFS="." read -r major minor patch <<<"$version_number"
+minor=$((minor + 1))
+patch=0
+new_tag="${prefix}${major}.${minor}.${patch}"
+fi
+
+comment="$*"
+[[ -z "$comment" ]] && comment="Nuevo release $new_tag"
+
+git tag -a "$new_tag" -m "$comment"
+git push origin "$new_tag"
+
+echo "Nuevo tag creado y enviado: $new_tag"
+}; increment_minor'
+
+alias gtx='increment_major() {
+latest_tag=$(git describe --tags --abbrev=0 2>/dev/null)
+
+if [[ -z "$latest_tag" ]]; then
+echo "No hay tags en el repositorio. Creando el primer tag V1.0.0..."
+new_tag="V1.0.0"
+else
+prefix=$(echo "$latest_tag" | grep -oE "^[^0-9]*")
+version_number=${latest_tag#"$prefix"}
+
+if [[ ! "$version_number" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+echo "Error: No se pudo extraer correctamente la versión del último tag ($latest_tag)."
+return 1
+fi
+
+IFS="." read -r major minor patch <<<"$version_number"
+major=$((major + 1))
+minor=0
+patch=0
+new_tag="${prefix}${major}.${minor}.${patch}"
+fi
+
+comment="$*"
+[[ -z "$comment" ]] && comment="Nuevo release $new_tag"
+
+git tag -a "$new_tag" -m "$comment"
+git push origin "$new_tag"
+
+echo "Nuevo tag creado y enviado: $new_tag"
+}; increment_major'
+
+# Alias para acceder al archivo hosts y para cargar gulp
+alias ho='code /etc/hosts'
+alias estilos='estilos() {
+cd htdocs
+nvm use 14.15
+npm i
+gulp watch
+}; estilos'
+
+getGitBranch() {
+  git symbolic-ref HEAD | cut -d'/' -f3
+}
+
+getLatestCommitJiraIssue() {
+  git log --oneline --skip 1 -n 1 | awk  '{print $2}'
+}
