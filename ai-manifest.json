@@ -1,6 +1,0 @@
-{
-  "ai:describe": "https://raw.githubusercontent.com/mandreu-av/TyrCommands/main/commands/ai-describe.tyr.ts",
-  "ai:code": "https://raw.githubusercontent.com/mandreu-av/TyrCommands/main/commands/ai-code.tyr.ts",
-  "ai:test": "https://raw.githubusercontent.com/mandreu-av/TyrCommands/main/commands/ai-test.tyr.ts",
-  "ai:chat": "https://raw.githubusercontent.com/mandreu-av/TyrCommands/main/commands/ai-chat.tyr.ts"
-}
