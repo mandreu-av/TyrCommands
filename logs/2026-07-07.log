@@ -1,3 +1,6 @@
 [2026-07-07T08:04:07.128Z] [SUCCESS] File written: /Users/mandreu/.tyr/manifest.json
 [2026-07-07T08:04:07.129Z] [SUCCESS] manifest.json generated at /Users/mandreu/.tyr/manifest.json (12 commands).
 [2026-07-07T08:04:07.129Z] [INFO] Commit and push it so others can install it with: tyr --add <raw-url-to-manifest.json>
+[2026-07-07T08:09:57.269Z] [SUCCESS] File written: /Users/mandreu/.tyr/manifest.json
+[2026-07-07T08:09:57.269Z] [SUCCESS] manifest.json generated at /Users/mandreu/.tyr/manifest.json (12 commands).
+[2026-07-07T08:09:57.269Z] [INFO] Commit and push it so others can install it with: tyr --add <raw-url-to-manifest.json>
