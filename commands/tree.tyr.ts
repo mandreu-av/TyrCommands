@@ -1,15 +1,12 @@
 import fs from 'fs';
-import path from 'path';
-import type { TyrContext } from '@orxataguy/tyr';
+import type { TyrContext } from '@tyrframework/cli';
 
 /**
- *
- * Genera un árbol visual legible de archivos y carpetas del directorio actual
+ * @description Genera un árbol visual legible de archivos y carpetas del directorio actual
  * (o del directorio indicado como argumento).
- *
- * Uso:
- *   tyr tree
- *   tyr tree <directorio>
+ * @example
+ * tyr tree
+ * tyr tree <directorio>
  */
 
 const IGNORE = new Set(['.DS_Store', '.git', '.next', '.gitignore', 'node_modules', 'vendor', 'dist', '.cache']);
@@ -22,7 +19,7 @@ interface TreeNode {
     [name: string]: TreeNode | null;
 }
 
-function buildTree(dir: string, depth: number = 0, maxDepth: number = 10): TreeNode {
+function buildTree(path: any, dir: string, depth: number = 0, maxDepth: number = 10): TreeNode {
     if (depth >= maxDepth) return {};
 
     const tree: TreeNode = {};
@@ -71,7 +68,7 @@ function renderTree(tree: TreeNode, prefix: string = ''): void {
     });
 }
 
-export default ({ fail, logger }: TyrContext) => {
+export default ({ fail, path, logger}: TyrContext) => {
     return async (args: string[]) => {
         const targetDir = args[0]
             ? path.resolve(process.cwd(), args[0])
@@ -88,7 +85,7 @@ export default ({ fail, logger }: TyrContext) => {
 
         logger.info(`${MAGENTA}${targetDir}${RESET}`);
 
-        const tree = buildTree(targetDir);
+        const tree = buildTree(path, targetDir);
 
         if (Object.keys(tree).length === 0) {
             logger.info('(directorio vacío)');

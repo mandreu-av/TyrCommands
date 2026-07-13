@@ -1,14 +1,12 @@
-import type { TyrContext } from '@orxataguy/tyr';
+import type { TyrContext } from '@tyrframework/cli';
 
 /**
- *
- * Limpia la caché de SCSS en el compilador de Avantio.
+ * @description Limpia la caché de SCSS en el compilador de Avantio.
  * Si se pasa un keyword, limpia únicamente ese broker.
  * Sin argumentos, lanza un flush global.
- *
- * Uso:
- *   tyr flush
- *   tyr flush <keyword_broker>
+ * @example
+ * tyr flush
+ * tyr flush <keyword_broker>
  */
 export default ({ fail, logger, web }: TyrContext) => {
     return async (args: string[]) => {

@@ -1,16 +1,14 @@
-import path from 'path';
-import type { TyrContext } from '@orxataguy/tyr';
-
 /**
- *
- * Descarga una integración en el directorio de datos_broker.
+ * @description Descarga una integración en el directorio de datos_broker.
  * Acepta el nombre del broker directamente o una URL (en cuyo caso busca el broker en la BD).
- *
- * Uso:
- *   tyr di <bk_broker>
- *   tyr di <url_de_la_integracion>
+ * @example
+ * tyr di <bk_broker>
+ * tyr di <url_de_la_integracion>
  */
-export default ({ task, fail, logger, shell, fs, git, db, workspace, jira }: TyrContext) => {
+
+import type { TyrContext } from '@tyrframework/cli';
+
+export default ({ task, run, path, fail, logger, shell, fs, git, db, workspace, jira }: TyrContext) => {
     return async (args: string[]) => {
         const input = args[0];
 
@@ -31,7 +29,7 @@ export default ({ task, fail, logger, shell, fs, git, db, workspace, jira }: Tyr
 
         if (input.match(/^https?:\/\//)) {
             repoName = await task('Buscando broker en la base de datos', async () => {
-                const broker = await db.searchBrokerOnDB(input);
+                const broker = run('revealbk', [input]);
                 logger.info(`Broker encontrado: ${broker}`);
                 return broker;
             }) as string;

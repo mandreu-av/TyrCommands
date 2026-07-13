@@ -1,14 +1,12 @@
 import path from 'path';
-import type { TyrContext } from '@orxataguy/tyr';
+import type { TyrContext } from '@tyrframework/cli';
 
 /**
- *
- * Genera una nueva web v8 a partir de la plantilla framework-template.git.
+ * @description Genera una nueva web v8 a partir de la plantilla framework-template.git.
  * Crea la estructura de directorios, inicializa el repositorio git y opcionalmente
  * configura las landings del configWeb.php.
- *
- * Uso:
- *   tyr nw <nombre_ftp>
+ * @example
+ * tyr nw <nombre_ftp>
  */
 export default ({ task, fail, logger, shell, fs, git, workspace }: TyrContext) => {
     return async (args: string[]) => {

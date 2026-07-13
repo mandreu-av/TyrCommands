@@ -1,14 +1,12 @@
-import type { TyrContext } from '@orxataguy/tyr';
+import type { TyrContext } from '@tyrframework/cli';
 
 const MAX_SLAB = 42;
 
 /**
- *
- * Busca una clave de memcache del tipo proc_getconfig y la elimina.
- *
- * Uso:
- *   tyr remcache <broker> <idioma> <key> <separador>
- *   tyr remcache bk_horizonenterpri it
+ * @description Busca una clave de memcache del tipo proc_getconfig y la elimina.
+ * @example
+ * tyr remcache <broker> <idioma> <key> <separador>
+ * tyr remcache bk_horizonenterpri it
  */
 export default ({ fail, logger, web }: TyrContext) => {
     return async (args: string[]) => {

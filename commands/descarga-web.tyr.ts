@@ -1,17 +1,15 @@
-import path from 'path';
-import type { TyrContext } from '@orxataguy/tyr';
-
 /**
- *
- * Descarga una web de clientes en el directorio de webs.
+ * @description Descarga una web de clientes en el directorio de webs.
  * Acepta el nombre FTP directamente o una URL (en cuyo caso extrae el nombre
  * del meta tag "webname" o busca en la BD).
- *
- * Uso:
- *   tyr dw <nombre_ftp>
- *   tyr dw <url_de_la_web>
+ * @example
+ * tyr dw <nombre_ftp>
+ * tyr dw <url_de_la_web>
  */
-export default ({ task, fail, logger, shell, git, web, db, workspace, jira }: TyrContext) => {
+
+import type { TyrContext } from '@tyrframework/cli';
+
+export default ({ run, task, fail, logger, shell, git, web, path, workspace, jira }: TyrContext) => {
     return async (args: string[]) => {
         const input = args[0];
 
@@ -40,7 +38,7 @@ export default ({ task, fail, logger, shell, git, web, db, workspace, jira }: Ty
                 }
 
                 logger.info('Meta tag no encontrado, buscando en la base de datos...');
-                const broker = await db.searchBrokerOnDB(input);
+                const broker = run('revealbk', [input]);
                 logger.info(`Nombre encontrado en BD: ${broker}`);
                 return broker;
             }) as string;

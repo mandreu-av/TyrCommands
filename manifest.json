@@ -6,6 +6,7 @@
   "nic": "https://raw.githubusercontent.com/mandreu-av/TyrCommands/main/commands/nueva-integracion-custom.tyr.ts",
   "nw": "https://raw.githubusercontent.com/mandreu-av/TyrCommands/main/commands/nueva-web.tyr.ts",
   "tree": "https://raw.githubusercontent.com/mandreu-av/TyrCommands/main/commands/tree.tyr.ts",
+  "revealbk": "https://raw.githubusercontent.com/mandreu-av/TyrCommands/main/commands/revealbk.tyr.ts",
   "remcache": "https://raw.githubusercontent.com/mandreu-av/TyrCommands/main/commands/cache-remover.tyr.ts",
   "$env": "https://raw.githubusercontent.com/mandreu-av/TyrCommands/main/.env.example"
 }

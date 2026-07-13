@@ -1,16 +1,13 @@
-import path from 'path';
-import type { TyrContext } from '@orxataguy/tyr';
+import type { TyrContext } from '@tyrframework/cli';
 
 /**
- *
- * Crea una nueva integración estándar para el broker indicado.
+ * @description Crea una nueva integración estándar para el broker indicado.
  * Clona la plantilla bk_istandard.git, inicializa el repositorio
  * apuntando al remoto correcto y lo vincula a un ticket de Jira.
- *
- * Uso:
- *   tyr nib <bk_broker>
+ * @example
+ * tyr nib <bk_broker>
  */
-export default ({ task, fail, logger, shell, git, workspace, jira }: TyrContext) => {
+export default ({ task, fail, logger, shell, git, path, workspace, jira }: TyrContext) => {
     return async (args: string[]) => {
         const repoName = args[0];
 
