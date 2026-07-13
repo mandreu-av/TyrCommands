@@ -5,7 +5,7 @@
   "private": true,
   "description": "Comandos personalizados de Tyr (~/.tyr/)",
   "dependencies": {
-    "@orxataguy/tyr": "latest"
+    "@tyrframework/cli": "latest"
   },
   "devDependencies": {
     "@types/node": "^25.6.0",
